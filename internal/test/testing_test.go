@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/jhillyerd/enmime"
+	"github.com/zond/enmime"
 )
 
 func TestHelperComparePartsEqual(t *testing.T) {

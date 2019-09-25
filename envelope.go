@@ -1,6 +1,7 @@
 package enmime
 
 import (
+	"bytes"
 	"fmt"
 	"io"
 	"mime"
@@ -9,7 +10,7 @@ import (
 	"strings"
 
 	"github.com/jaytaylor/html2text"
-	"github.com/jhillyerd/enmime/internal/coding"
+	"github.com/zond/enmime/internal/coding"
 	"github.com/pkg/errors"
 )
 
@@ -358,7 +359,7 @@ func ensureCommaDelimitedAddresses(s string) string {
 	inQuotes := false
 	inDomain := false
 	escapeSequence := false
-	sb := strings.Builder{}
+	sb := &bytes.Buffer{}
 	for _, r := range s {
 		if escapeSequence {
 			escapeSequence = false

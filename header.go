@@ -10,7 +10,7 @@ import (
 	"net/textproto"
 	"strings"
 
-	"github.com/jhillyerd/enmime/internal/coding"
+	"github.com/zond/enmime/internal/coding"
 	"github.com/pkg/errors"
 )
 
@@ -351,11 +351,11 @@ func consumeParam(s string) (consumed, rest string) {
 		return "", s
 	}
 
-	param := strings.Builder{}
+	param := &bytes.Buffer{}
 	param.WriteString(s[:i+1])
 	s = s[i+1:]
 
-	value := strings.Builder{}
+	value := &bytes.Buffer{}
 	valueQuotedOriginally := false
 	valueQuoteAdded := false
 	valueQuoteNeeded := false
@@ -498,7 +498,7 @@ func fixUnquotedSpecials(s string) string {
 		return s
 	}
 
-	clean := strings.Builder{}
+	clean := &bytes.Buffer{}
 	clean.WriteString(s[:idx+1])
 	s = s[idx+1:]
 
@@ -523,7 +523,7 @@ func fixUnquotedSpecials(s string) string {
 //  Output: application/rtf; charset=iso-8859-1; name="\"V047411.rtf\".rtf"
 func fixUnescapedQuotes(hvalue string) string {
 	params := strings.SplitAfter(hvalue, ";")
-	sb := &strings.Builder{}
+	sb := &bytes.Buffer{}
 	for i := 0; i < len(params); i++ {
 		// Inspect for "=" byte.
 		eq := strings.IndexByte(params[i], '=')
@@ -619,7 +619,7 @@ func rfc2047AttributeName(name string) string {
 
 	// handle n-number of RFC2047 chunk occurrences
 	count := strings.Count(name, "?=")
-	result := &strings.Builder{}
+	result := &bytes.Buffer{}
 	var beginning, ending int
 	for i := 0; i < count; i++ {
 		beginning = strings.Index(s, "=?")

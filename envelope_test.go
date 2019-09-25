@@ -7,8 +7,8 @@ import (
 	"testing"
 
 	"github.com/go-test/deep"
-	"github.com/jhillyerd/enmime"
-	"github.com/jhillyerd/enmime/internal/test"
+	"github.com/zond/enmime"
+	"github.com/zond/enmime/internal/test"
 )
 
 func TestParseHeaderOnly(t *testing.T) {

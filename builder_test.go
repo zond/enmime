@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/jhillyerd/enmime"
-	"github.com/jhillyerd/enmime/internal/test"
+	"github.com/zond/enmime"
+	"github.com/zond/enmime/internal/test"
 )
 
 var addrSlice = []mail.Address{{Name: "name", Address: "addr"}}

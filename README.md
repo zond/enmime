@@ -1,7 +1,7 @@
 # enmime
-[![GoDoc](https://godoc.org/github.com/jhillyerd/enmime?status.png)][GoDoc]
+[![GoDoc](https://godoc.org/github.com/zond/enmime?status.png)][GoDoc]
 [![Build Status](https://travis-ci.org/jhillyerd/enmime.png?branch=master)][Build Status]
-[![Go Report Card](https://goreportcard.com/badge/github.com/jhillyerd/enmime)][Go Report Card]
+[![Go Report Card](https://goreportcard.com/badge/github.com/zond/enmime)][Go Report Card]
 [![Coverage Status](https://coveralls.io/repos/github/jhillyerd/enmime/badge.svg)][Coverage Status]
 
 enmime is a MIME encoding and decoding library for Go, focused on generating and
@@ -12,7 +12,7 @@ enmime includes a fluent interface builder for generating MIME encoded messages,
 see the wiki for example [Builder Usage].
 
 API documentation and examples can be found here:
-http://godoc.org/github.com/jhillyerd/enmime
+http://godoc.org/github.com/zond/enmime
 
 
 ## Development Status
@@ -30,13 +30,13 @@ before an official release.
 enmime is written in [Go][Golang].
 
 enmime is open source software released under the MIT License.  The latest
-version can be found at https://github.com/jhillyerd/enmime
+version can be found at https://github.com/zond/enmime
 
 [Build Status]:    https://travis-ci.org/jhillyerd/enmime
-[Builder Usage]:   https://github.com/jhillyerd/enmime/wiki/Builder-Usage 
+[Builder Usage]:   https://github.com/zond/enmime/wiki/Builder-Usage 
 [Coverage Status]: https://coveralls.io/github/jhillyerd/enmime
-[CONTRIBUTING.md]: https://github.com/jhillyerd/enmime/blob/develop/CONTRIBUTING.md
+[CONTRIBUTING.md]: https://github.com/zond/enmime/blob/develop/CONTRIBUTING.md
 [Inbucket]:        http://www.inbucket.org/
-[GoDoc]:           https://godoc.org/github.com/jhillyerd/enmime
+[GoDoc]:           https://godoc.org/github.com/zond/enmime
 [Golang]:          http://golang.org/
-[Go Report Card]:  https://goreportcard.com/report/github.com/jhillyerd/enmime
+[Go Report Card]:  https://goreportcard.com/report/github.com/zond/enmime

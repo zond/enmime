@@ -5,8 +5,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/jhillyerd/enmime"
-	"github.com/jhillyerd/enmime/cmd"
+	"github.com/zond/enmime"
+	"github.com/zond/enmime/cmd"
 )
 
 func Example() {
